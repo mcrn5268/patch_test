@@ -1,66 +1,61 @@
-# Flutter Project
-
-## Description
-This is a Flutter application for managing products and categories. It supports both mobile and web platforms.
+# Flutter App Setup and Usage Guide
 
 ## Prerequisites
-- Flutter SDK (Ensure you have Flutter 2.x or above installed).
-- Android Studio, Visual Studio Code, or another IDE with Flutter support.
-- Chrome browser (for web support).
+Before running the app, make sure you have the following installed:
+- [Flutter](https://flutter.dev/docs/get-started/install)
+- A device or emulator for mobile testing
+- A web browser for testing the web version
 
-## Setup Instructions
+## APK Installation (Android)
+You can manually install the APK on your Android device.
 
-### Clone the Repository
-1. Clone the repository to your local machine:
+1. Download the APK from the following directory after building the release:
+   - Path: `build\app\outputs\flutter-apk\app-release.apk`
+   
+2. Transfer the APK file to your Android device, or use the following command to install it directly from your terminal:
+   ```bash 
+   adb install release\android\app-release.apk
+   ```
 
-    ```bash
-    git clone https://github.com/your-username/your-repository-name.git
-    ```
+3. Once installed, you can open the app from your app drawer.
 
-2. Navigate to the project directory:
+Note: If you have trouble installing the APK, ensure that the "Install from unknown sources" option is enabled in your Android device settings.
 
-    ```bash
-    cd your-repository-name
-    ```
+## Running the Web Version
+To run the already built web version of the app locally, follow these steps:
 
-3. Install dependencies:
+1. Locate the Build Folder: The web version of the app is built and ready for use in the build\web folder.
 
-    ```bash
-    flutter pub get
-    ```
+2. Serve the Web App Locally:
 
-### Running the App on Android (Mobile)
-1. Connect your Android device or start an Android emulator.
-2. To build and run the app in release mode, run the following command:
+    - Open the terminal or command prompt.
 
-    ```bash
-    flutter build apk --release
-    ```
+    - Navigate to the build\web folder:
+        ```bash 
+        cd path/to/your/project/release/web
+        ```
 
-3. Install the APK on your device:
+    - You can serve the web app using any local server or simply open the index.html file directly in a browser. For a simple local server, use Python:
 
-    ```bash
-    flutter install
-    ```
+    For Python 3.x:
 
-4. Alternatively, you can manually install the APK on your device.
+        ```bash
+        python -m http.server
+        ```
 
-### Running the App on Web (Localhost)
-1. Ensure you have a web environment set up by following the Flutter [web installation guide](https://flutter.dev/docs/get-started/web).
-2. To run the app on your local machine using Chrome, execute:
+    For Python 2.x:
 
-    ```bash
-    flutter run -d chrome
-    ```
+        ```bash
+        python -m SimpleHTTPServer
+        ```
 
-3. The app will be served at `http://localhost:8000/`.
+    This will start a local server. Open your browser and visit http://localhost:8000.
 
-### Building for Web (Production)
-1. To build the app for web production:
+3. Best Viewing Experience:
 
-    ```bash
-    flutter build web
-    ```
+    - For the best experience, it is recommended to use a mobile screen resolution or emulate a mobile screen size in your browser. You can do this by inspecting the app in your browser (right-click → Inspect → Toggle Device Toolbar) and selecting a mobile device to simulate.
 
-2. The production files will be in the `build/web` directory. You can deploy these files to a web server.
+
+## App Demo Video
+Watch a demo of the app in action: App Demo on YouTube (https://youtube.com/shorts/cIlM1r5-R7Y)
 
