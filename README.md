@@ -10,7 +10,7 @@ Before running the app, make sure you have the following installed:
 You can manually install the APK on your Android device.
 
 1. Download the APK from the following directory after building the release:
-   - Path: `build\app\outputs\flutter-apk\app-release.apk`
+   - Path: `release\android\app-release.apk`
    
 2. Transfer the APK file to your Android device, or use the following command to install it directly from your terminal:
    ```bash 
@@ -24,7 +24,7 @@ Note: If you have trouble installing the APK, ensure that the "Install from unkn
 ## Running the Web Version
 To run the already built web version of the app locally, follow these steps:
 
-1. Locate the Build Folder: The web version of the app is built and ready for use in the build\web folder.
+1. Locate the Build Folder: The web version of the app is built and ready for use in the release\build\web folder.
 
 2. Serve the Web App Locally:
 
